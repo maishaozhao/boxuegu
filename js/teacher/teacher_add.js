@@ -1,3 +1,4 @@
-define([], function() {
+define(['aside'], function(undefined) {
 	
 });
+
