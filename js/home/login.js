@@ -36,7 +36,7 @@ define(['jquery', 'jqueryCookie', 'nprogress'], function($, undefined, nprogress
 					}
 				},
 				// 请求失败给出错误提示
-				error: function() {
+				error: function() { 
 					alert(arguments[2]);
 				}
 			});

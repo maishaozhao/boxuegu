@@ -33,15 +33,15 @@ define(['jquery', 'jqueryCookie'], function ($, undefined) {
 
 
 	// ajax-loading
-	(function () {
+	// (function () {
 
-		$(document).on('ajaxStart', function () {
-			$('.overlay').show();
-		}).on('ajaxStop', function () {
-			$('.overlay').hide();
-		});
+	// 	$(document).on('ajaxStart', function () {
+	// 		$('.overlay').show();
+	// 	}).on('ajaxStop', function () {
+	// 		$('.overlay').hide();
+	// 	});
 
-	})();
+	// })();
 
 
 });

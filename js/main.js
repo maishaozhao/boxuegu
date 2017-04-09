@@ -24,16 +24,16 @@ define([], function () {
       teacherList: 'js/teacher/teacher_list',
       userProfile: 'js/user/user_profile',
       userList: 'js/user/user_list',
-		 common: 'js/common/common',
+      common: 'js/common/common',
       aside: 'js/common/aside',
       header: 'js/common/header',
-			loading:'js/common/loading',
-			
+      loading: 'js/common/loading',
 
       // 配置第三方js模块别名
       template: 'lib/artTemplate/template-debug',
       bootstrap: 'lib/bootstrap/js/bootstrap',
       datepicker: 'lib/bootstrap-datepicker/js/bootstrap-datepicker',
+      datepickerCN: 'lib/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
       ckeditor: 'lib/ckeditor/ckeditor',
       ckeditorLand: 'lib/ckeditor/lang/zh-cn',
       echarts: 'lib/echarts/echarts.min',
@@ -45,13 +45,20 @@ define([], function () {
     },
 
     shim: {
+    	
       //bootstrap是非define依赖于jquery
       bootstrap: {
         deps: ['jquery']
+      },
+      
+      // 日期插件的语言包是非define定义的模块
+      datepickerCN: {
+      	deps: ['jquery', 'datepicker']
       }
     }
   });
-// 所有的页面，只要main.js加载完毕了，那么就优先加载进度条插件，显式进度条
+  
+  // 所有的页面，只要main.js加载完毕了，那么就优先加载进度条插件，显式进度条
   require(['nprogress'], function(nprogress) {
   	nprogress.start();
   });
