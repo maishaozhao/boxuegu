@@ -42,6 +42,7 @@ define([], function () {
       jqueryForm: 'lib/jquery-form/jquery.form',
       jqueryRegion: 'lib/jquery-region/jquery.region',
       nprogress: 'lib/nprogress/nprogress',
+     uploadify: 'lib/uploadify/jquery.uploadify'
     },
 
     shim: {
@@ -54,7 +55,15 @@ define([], function () {
       // 日期插件的语言包是非define定义的模块
       datepickerCN: {
       	deps: ['jquery', 'datepicker']
+      },
+      ckeditor: {
+        exports:'CKEDITOR'
+      },
+     // 这个上传文件的插件依赖jquery
+      uploadify: {
+      	deps: ['jquery']
       }
+      
     }
   });
   
